@@ -81,3 +81,9 @@ def complete_task(task_id: int):
 def delete_task(task_id: int):
     task = find_task(task_id)
     tasks.remove(task)
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run("main:app", reload=True)
